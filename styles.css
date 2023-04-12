@@ -1,0 +1,42 @@
+body{
+
+    /* background-color: #6D5D6E ; */
+    /* background-color: #4F4557 ; */
+    background-color: #393646;
+}
+
+.title-header{
+
+    /* background-color: #6D5D6E ;
+    background-color: #4F4557 ; */
+    display: inline-block;
+    position: relative;
+    right: 8px;
+    padding-right: 8px;
+    width: 100%;
+    background-color: #302940;
+    margin: 0px;
+}
+
+.title-header__title{
+
+    letter-spacing: 2vw;
+}
+
+.title-header__about{
+
+    font-size: 1em;
+    font-weight: 100;
+    letter-spacing: 0.5vw;
+}
+
+.title-header__title, .title-header__about{
+
+    color: white;
+    text-align: center;
+}
+
+/* effects */
+.glow{
+    text-shadow : 1px 1px 3px white, -1px -1px 3px white;
+}
