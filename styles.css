@@ -12,7 +12,7 @@ body{
     display: inline-block;
     position: relative;
     right: 8px;
-    padding-right: 8px;
+    top: -8px; 
     width: 100%;
     background-color: #302940;
     margin: 0px;
@@ -37,6 +37,7 @@ body{
 }
 
 /* effects */
+
 .glow{
     text-shadow : 1px 1px 3px white, -1px -1px 3px white;
 }
