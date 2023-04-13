@@ -5,16 +5,26 @@ body{
     background-color: #393646;
 }
 
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48;
+  color: white;
+}
+
 .title-header{
 
     /* background-color: #6D5D6E ;
     background-color: #4F4557 ; */
-    display: inline-block;
+    background-color: #302940;
+    display: block;
     position: relative;
     right: 8px;
-    top: -8px; 
+    bottom: 8px;
     width: 100%;
-    background-color: #302940;
+    padding: 8px;
     margin: 0px;
 }
 
@@ -31,7 +41,7 @@ body{
 }
 
 .title-header__title, .title-header__about{
-
+    
     color: white;
     text-align: center;
 }
