@@ -1,3 +1,5 @@
+/* html styling */
+
 body{
 
     /* background-color: #6D5D6E ; */
@@ -6,6 +8,7 @@ body{
     color: white;
 }
 
+/* elements styling */
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
@@ -47,6 +50,14 @@ body{
     
     color: white;
     text-align: center;
+}
+
+/* positioning */
+.centerDiv{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 /* effects */
