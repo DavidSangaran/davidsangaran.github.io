@@ -4,11 +4,19 @@ body{
 
     /* background-color: #6D5D6E ; */
     /* background-color: #4F4557 ; */
-    background-color: #393646;
+    background-image: linear-gradient(#070b34,#855988);
     color: white;
+    margin: 0;
+}
+div{
+
+    
+    padding: 2srem;
+
 }
 
 /* elements styling */
+
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
@@ -22,14 +30,8 @@ body{
 
     /* background-color: #6D5D6E ;
     background-color: #4F4557 ; */
-    background-color: #302940;
     display: block;
     position: relative;
-    right: 8px;
-    bottom: 8px;
-    /* width: 100%; */
-    padding: 8px;
-    margin: 0px;
     width: 100vw;
     height: 100vh;
 }
@@ -53,6 +55,7 @@ body{
 }
 
 /* positioning */
+
 .centerDiv{
     position: absolute;
     top: 50%;
