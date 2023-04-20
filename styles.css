@@ -15,6 +15,7 @@ div{
 
 }
 
+
 /* elements styling */
 
 .material-symbols-outlined {
@@ -24,6 +25,7 @@ div{
   'GRAD' 0,
   'opsz' 48;
   color: white;
+  padding: 2rem 1rem;
 }
 
 .title-header{
@@ -34,6 +36,7 @@ div{
     position: relative;
     width: 100vw;
     height: 100vh;
+    padding: 0;
 }
 
 .title-header__title{
