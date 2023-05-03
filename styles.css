@@ -9,12 +9,11 @@ body{
     margin: 0;
     overflow-x: clip;
 }
-div{
-
+/* div{
     
     padding: 2rem;
 
-}
+} */
 
 
 /* elements styling */
@@ -33,11 +32,11 @@ div{
 
     /* background-color: #6D5D6E ;
     background-color: #4F4557 ; */
-    display: block;
-    position: relative;
+    /* display: inline; */
+    /* position: relative; */
     width: 100vw;
     height: 100vh;
-    padding: 0;
+    /*padding: 0;*/
 }
 
 .title-header__title{
