@@ -88,7 +88,8 @@ body{
 }
 
 .name-svg {
-
+    
+    
     height: 30vw;
     width: 16vw;
     border: 3px solid white;
@@ -98,10 +99,10 @@ body{
 
     display: inline-block;
     height: 30vw;
-    position: absolute;
-    /* transform: translate(-50%,-50%); */
+    position: relative;
     top: 50%;
     left: 50%;
+    transform: translate(-50%,-50%);
     overflow: hidden;
 
 }
