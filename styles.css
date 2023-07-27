@@ -87,12 +87,21 @@ body{
     text-shadow : 1px 1px 3px white, -1px -1px 3px white;
 }
 
-.name-svg {
+.name-svg{
     
+    height: 50px;
+    width: 50px;
+    position: absolute;
+
+
+}
+.name-svg_group{
     
+    display: inline-block;
+    position: relative;
     height: 30vw;
     width: 16vw;
-    border: 3px solid white;
+    /* border: 3px solid white; */
 
 }
 .svg-group{
