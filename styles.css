@@ -95,6 +95,14 @@ body{
 
 
 }
+.name-constellation-svg{
+    
+    height: 30vw;
+    width: 16vw;
+    position: absolute;
+
+
+}
 .name-svg_group{
     
     display: inline-block;
