@@ -41,7 +41,7 @@ function spreadSVG(svgArr){
 
         let randX = Math.random()*screenWidth;
         let randY = Math.random()*screenHeight;
-        let randwidth = Math.random()*(svgWidth*0.70);
+        let randwidth = Math.random()*(svgWidth*0.70)+0.5;
         let randAngle = Math.random()*360;
 
         let randcolor = Math.floor(Math.random()*colorArr.length);
