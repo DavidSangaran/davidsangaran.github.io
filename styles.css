@@ -87,7 +87,6 @@ body{
     text-shadow : 1px 1px 3px white, -1px -1px 3px white;
 }
 
-
 .name-svg{
     
     height: 1.9vw;
@@ -127,4 +126,17 @@ body{
     transform: translate(-50%,-50%);
     overflow: hidden;
 
+}
+
+/* animation */
+@keyframes twinkle {
+    from {
+        opacity: 100%
+    }
+    50%{
+        opacity: 60%
+    }
+    to {
+        opacity: 100%
+    }
 }
