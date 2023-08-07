@@ -1,11 +1,11 @@
 var star = document.getElementById("svg-star")
 var starCount = 120;
-
+var lineArr = document.getElementsByClassName("name-constellation-svg")
 var starArr = cloneSVG(star, starCount);
 
 spreadSVG(starArr);
-
-
+drawLine(lineArr);
+//var line = document.getElementsByClassName("name-constellation-svg")[0];
 
 
 
@@ -56,8 +56,19 @@ function spreadSVG(svgArr){
         svgArr[i].style.fill = `${colorArr[randcolor]}`
         svgArr[i].style.filter = `blur(${randBlur}px)`
         svgArr[i].style.animation = `twinkle ${randTime}s ease-in-out infinite`
-        svgArr[i].style.animation = 
         document.getElementById("star-div").appendChild(svgArr[i]);
+
+    }
+
+}
+
+function drawLine(arr){
+
+    for( i=0 ; i<arr.length ; i++ ){
+
+        let pathLength = arr[i].querySelector('svg path').getTotalLength();;
+
+        arr[i].style.cssText=`stroke-dasharray: ${pathLength}; stroke-dashoffset: ${pathLength};`
 
     }
 
