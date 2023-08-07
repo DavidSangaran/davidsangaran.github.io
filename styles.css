@@ -87,12 +87,14 @@ body{
     text-shadow : 1px 1px 3px white, -1px -1px 3px white;
 }
 
+
 .name-svg{
     
     height: 1.9vw;
     width: 1.9vw;
     position: absolute;
-
+    fill: white;
+    stroke: white;
 
 }
 .name-constellation-svg{
@@ -100,7 +102,10 @@ body{
     height: 30vw;
     width: 16vw;
     position: absolute;
-
+    stroke: white;
+    stroke-width: 5;
+    fill: none;
+    stroke-opacity: 30%;
 
 }
 .name-svg_group{
