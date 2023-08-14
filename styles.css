@@ -50,6 +50,7 @@ body{
 
 .title-header{
 
+    position: relative;
     width: 100vw;
     height: 100vh;
 
@@ -144,6 +145,60 @@ body{
     /* overflow: hidden; */
 
 }
+
+#person{
+
+    position: absolute;
+    height: 410px;
+    width: 500px;
+    top: 30%;
+    left: -30%;
+    transition: transform 1s;
+}
+
+#torso1{
+
+    position: absolute;
+    top: 45%;
+    height: 55%;
+    left: 3%;
+
+}
+
+#face1{
+
+    position: absolute;
+    height: 40%;
+
+}
+
+#arm1{
+
+    position: absolute;
+    height: 30%;
+    width: 13%;
+    left: 47%;
+    top: 47%;
+    transform: translate(-50%,-50%) rotate(40deg);
+
+}
+#arm2{
+
+    position: absolute;
+    height: 20%;
+    width: 13%;
+    left: 55%;
+    top: 20%;
+    transform: translate(-50%,-50%);
+
+}
+
+.person-in{
+
+    transform: translate(60%,0%) rotate(20deg);
+
+}
+
 
 .greeting-box{
 
