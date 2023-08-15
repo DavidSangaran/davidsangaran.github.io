@@ -70,16 +70,16 @@ function spreadSVG(svgArr){
 
     for( i=0 ; i<svgArr.length ; i++ ){
 
-        let randX = Math.random()*screenWidth;
+        let randX = Math.random()*100;
         /* let randY = Math.random()*screenHeight; */ /* Previous PosY value */
         let randY = () => {
             const u1 = Math.random();
             const u2 = Math.random();
             let z0 = Math.sqrt(-2 * Math.log(u1)) * Math.cos(2 * Math.PI * u2); /* This line is a standard deviation for the stars to appear elss frequently the lower down the page*/
             z0 < 0 ? z0 *= -1: z0 *= 1; /* Normalizing negative numbers to positive */
-            return Math.floor(z0*screenHeight);
+            return Math.floor(z0*100);
         };
-        let randwidth = Math.random()* (svgWidth*0.9 - svgWidth*0.1) + svgWidth*0.1;
+        let randwidth = Math.random() * (svgWidth/screenWidth * 100);
         let randAngle = Math.random()*360;
 
         let randcolor = Math.floor(Math.random()*colorArr.length);
@@ -87,11 +87,11 @@ function spreadSVG(svgArr){
         /* let randTime = 1; */
         let randTime = Math.random() * (3 - 1) + 1;
         
-        svgArr[i].style.left = `${randX}px`
-        svgArr[i].style.top = `${randY()}px`
+        svgArr[i].style.left = `${randX}%`
+        svgArr[i].style.top = `${randY()}%`
         //svgArr[i].style.transform = `rotate(${randAngle}deg)`
-        svgArr[i].style.width = `${randwidth}px`
-        svgArr[i].style.height = `${randwidth}px`
+        svgArr[i].style.width = `${randwidth}%`
+        svgArr[i].style.height = `${randwidth}%`
         svgArr[i].style.fill = `${colorArr[randcolor]}`
         svgArr[i].style.filter = `blur(${randBlur}px)`
         svgArr[i].style.animation = `twinkle ${randTime}s ease-in-out infinite`
