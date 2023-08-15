@@ -53,6 +53,7 @@ body{
     position: relative;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
 
 }
 
@@ -149,11 +150,11 @@ body{
 #person{
 
     position: absolute;
-    height: 70vh;
-    width: 70vh;
-    
+    height: min(80vw, 70vh);
+    width: min(80vw, 70vh);
+
     top: 15%;
-    left: -70vh;
+    left: calc(-1 * min(80vw, 70vh));
     transition: transform 1s;
 }
 
