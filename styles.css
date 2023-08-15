@@ -51,6 +51,8 @@ body{
 .title-header{
 
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -64,9 +66,11 @@ body{
 
 .title-header__about{
 
-    font-size: 1em;
-    font-weight: 100;
-    letter-spacing: 0.5vw;
+    flex: 1;
+    min-width: 30vw;
+    z-index: +1;
+    padding: 5%;
+
 }
 
 .title-header__title, .title-header__about{
@@ -147,11 +151,19 @@ body{
 
 }
 
+.sticky{
+
+    position: sticky;
+    width: fit-content;
+    height: fit-content;
+
+}
+
 #person{
 
     position: relative;
     height: min(80vw, 70vh);
-    width: min(80vw, 70vh);
+    flex-basis: min(80vw, 70vh);
 
     top: 15%;
     left: calc(-1 * min(80vw, 70vh));

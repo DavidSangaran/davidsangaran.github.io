@@ -20,7 +20,7 @@ const observer = new IntersectionObserver((entries) => {
 
         });    
 
-    },{threshold: 0.6});
+    },{threshold: 0.5});
 
 const elementList = document.querySelectorAll(".scrollElement") 
 elementList.forEach((elem) => observer.observe(elem));
@@ -79,8 +79,7 @@ function spreadSVG(svgArr){
             z0 < 0 ? z0 *= -1: z0 *= 1; /* Normalizing negative numbers to positive */
             return Math.floor(z0*100);
         };
-        let randwidth = Math.random() * (svgWidth/screenWidth * 100);
-        let randAngle = Math.random()*360;
+        let randwidth = Math.random() * (svgWidth/screenWidth * 100 - svgWidth/screenWidth * 10) + svgWidth/screenWidth * 10;
 
         let randcolor = Math.floor(Math.random()*colorArr.length);
         let randBlur = Math.random() * 1;
