@@ -1,4 +1,7 @@
 /* html styling */
+*{
+    box-sizing: border-box;
+}
 
 body{
 
@@ -8,9 +11,9 @@ body{
     color: white;
     margin: 0;
     overflow-x: hidden;
-    overflow: auto;
     -ms-overflow-style: none; /* IE 11 */
     scrollbar-width: none; /* Firefox 64 */
+    
 }
 
 /* div{
@@ -67,7 +70,7 @@ body{
 .title-header__about{
 
     flex: 1;
-    min-width: 30vw;
+    min-width: 50vw;
     z-index: +1;
     padding: 5%;
 
