@@ -1,4 +1,8 @@
 /* html styling */
+html {
+    scroll-behavior: smooth;
+  }
+
 *{
     box-sizing: border-box;
 }
@@ -162,13 +166,25 @@ body{
 
 }
 
-#person{
+#person-padding{
 
     position: relative;
     height: min(80vw, 70vh);
+    width: min(80vw, 70vh);
     flex-basis: min(80vw, 70vh);
-
+    
     top: 15%;
+
+}
+#person{
+
+    position: fixed;
+    height: min(80vw, 70vh);
+    width: min(80vw, 70vh);
+    flex-basis: min(80vw, 70vh);
+    
+    top: 15%;
+
     left: calc(-1 * min(80vw, 70vh));
     transition: transform 1s;
 }
@@ -207,6 +223,16 @@ body{
     left: 65%;
     top: 20%;
     transform: translate(-50%,-50%);
+
+}
+#wrench1{
+
+    position: absolute;
+    height: 60%;
+    width: 60%;
+    left: 65%;
+    top: 10%;
+    transform: translate(-50%,-50%) rotate(90deg);
 
 }
 

@@ -20,7 +20,7 @@ const observer = new IntersectionObserver((entries) => {
 
         });    
 
-    },{threshold: 0.6});
+    },{threshold: 0.7});
 
 const elementList = document.querySelectorAll(".scrollElement") 
 elementList.forEach((elem) => observer.observe(elem));
