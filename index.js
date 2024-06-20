@@ -77,7 +77,6 @@ function spreadSVG(svgArr){
             const stddev = 3.5;
             let z0 = Math.sqrt(-2 * Math.log(u1)) * Math.cos(2 * Math.PI * u2); /* This line is a standard deviation for the stars to appear less frequently the lower down the page*/
             z0 < 0 ? z0 *= -1: z0 *= 1; /* Normalizing negative numbers to positive */
-            console.log(Math.floor((z0/3*100)*stddev+mean))
             return Math.floor((z0/3*100)*stddev+mean);
         };
         let randwidth = Math.random()* (0.9 - 0.1) + 0.1;
@@ -114,21 +113,22 @@ function drawLine(arr){
 
 }
 
-function scrollToY(targetY, duration) {
-    const startY = window.scrollY;
-    const startTime = performance.now();
-  
-    function scrollStep(timestamp) {
-      const currentTime = timestamp - startTime;
-      const progress = Math.min(currentTime / duration, 1);
-  
-      window.scrollTo(0, startY + (targetY - startY) * progress);
-  
-      if (progress < 1) {
-        window.requestAnimationFrame(scrollStep);
-      }
-    }
-  
-    window.requestAnimationFrame(scrollStep);
-  }
+function scrollToNext(element) {
 
+    let nextDiv = element.parentElement.nextSibling.nextSibling;
+    nextDiv.scrollTo({ behavior: "smooth"});
+   
+}
+
+
+function scrollTox(element, to, duration) {
+    if (duration <= 0) return;
+    var difference = to - element.scrollTop;
+    var perTick = difference / duration * 10;
+
+    setTimeout(function() {
+        element.scrollTop = element.scrollTop + perTick;
+        if (element.scrollTop === to) return;
+        scrollTox(element, to, duration - 10);
+    }, 10);
+}
