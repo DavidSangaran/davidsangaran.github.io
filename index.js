@@ -26,8 +26,6 @@ const elementList = document.querySelectorAll(".scrollElement")
 elementList.forEach((elem) => observer.observe(elem));
 
 
-
-
 function cloneSVG(svgType1,svgType2, count){
 
     var svgArr = [];
@@ -61,25 +59,28 @@ function spreadSVG(svgArr){
     let colorArr=['#afc9ff','#c7d8ff','#fff4f3','#ffe5cf','#ffd9b2','#ffc78e','#ffa651']
     
     let screenWidth = window.innerWidth;
-    let screenHeight = window.innerHeight;
+    let screenHeight = screen.availHeight;
+    let bodyHeight = document.body.offsetHeight;
 
     let svgWidth = star.clientWidth;
 
-    screenWidth += svgWidth;
-    screenHeight += svgWidth;
+    screenWidthPerc = (svgWidth/screenWidth) * 100 + 100;
 
     for( i=0 ; i<svgArr.length ; i++ ){
 
-        let randX = Math.random()*screenWidth;
+        let randX = Math.random()*screenWidthPerc;
         /* let randY = Math.random()*screenHeight; */ /* Previous PosY value */
         let randY = () => {
             const u1 = Math.random();
             const u2 = Math.random();
-            let z0 = Math.sqrt(-2 * Math.log(u1)) * Math.cos(2 * Math.PI * u2); /* This line is a standard deviation for the stars to appear elss frequently the lower down the page*/
+            const mean = 0;
+            const stddev = 3.5;
+            let z0 = Math.sqrt(-2 * Math.log(u1)) * Math.cos(2 * Math.PI * u2); /* This line is a standard deviation for the stars to appear less frequently the lower down the page*/
             z0 < 0 ? z0 *= -1: z0 *= 1; /* Normalizing negative numbers to positive */
-            return Math.floor(z0*screenHeight);
+            console.log(Math.floor((z0/3*100)*stddev+mean))
+            return Math.floor((z0/3*100)*stddev+mean);
         };
-        let randwidth = Math.random()* (svgWidth*0.9 - svgWidth*0.1) + svgWidth*0.1;
+        let randwidth = Math.random()* (0.9 - 0.1) + 0.1;
         let randAngle = Math.random()*360;
 
         let randcolor = Math.floor(Math.random()*colorArr.length);
@@ -87,11 +88,11 @@ function spreadSVG(svgArr){
         /* let randTime = 1; */
         let randTime = Math.random() * (3 - 1) + 1;
         
-        svgArr[i].style.left = `${randX}px`
-        svgArr[i].style.top = `${randY()}px`
+        svgArr[i].style.left = `${randX}%`
+        svgArr[i].style.top = `${randY()}%`
         //svgArr[i].style.transform = `rotate(${randAngle}deg)`
-        svgArr[i].style.width = `${randwidth}px`
-        svgArr[i].style.height = `${randwidth}px`
+        svgArr[i].style.transform = `scale(${randwidth})`
+        //svgArr[i].style.height = `${randwidth}px`
         svgArr[i].style.fill = `${colorArr[randcolor]}`
         svgArr[i].style.filter = `blur(${randBlur}px)`
         svgArr[i].style.animation = `twinkle ${randTime}s ease-in-out infinite`
