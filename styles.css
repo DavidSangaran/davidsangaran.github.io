@@ -60,6 +60,7 @@ body{
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    align-items: center;
 
 }
 
@@ -244,23 +245,23 @@ body{
 
 .cloud-circle-near {
     width: 120vw;
-    height: 10vh;
+    height: 50vh;
     border-radius: 60%;
     filter: url(#filter);
-    box-shadow: 110vw 20vh 300px 0px #fff;
+    box-shadow: 120vw 50vh 300px -150px #fff;
     position: relative;
-    top: -55vh;
+    top: -100vh;
     left: -110vw;
 }
 
 .cloud-circle-near-2 {
     width: 120vw;
-    height: 10vh;
+    height: 50vh;
     border-radius: 60%;
     filter: url(#filter);
-    box-shadow: 110vw 20vh 300px 0px #fff;
+    box-shadow: 120vw 50vh 300px -150px #fff;
     position: relative;
-    top: -20vh;
+    top: -90vh;
     left: -130vw;
 }
 
