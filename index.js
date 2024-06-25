@@ -74,7 +74,7 @@ function spreadSVG(svgArr){
             z0 < 0 ? z0 *= -1: z0 *= 1; /* Normalizing negative numbers to positive */
             return Math.floor((z0/3*100)*stddev+mean);
         };
-        let randwidth = Math.random()* (0.9 - 0.1) + 0.1;
+        let randwidth = Math.random()* (0.8 - 0.1) + 0.1;
         let randAngle = Math.random()*360;
 
         let randcolor = Math.floor(Math.random()*colorArr.length);

@@ -97,15 +97,39 @@
         </div>
       </div>
       <!-- <button width="20px" height="20px" onclick="scrollTox(document.documentElement,this.parentElement.nextSibling.nextSibling.offsetTop,600)">Click Me!</button>  -->
-      <button width="20px" height="20px" onclick="scrollToNext(this)"><b>&#709;</b></button> 
-    </div>
-
-    <div class="spacer">
-      <div id="cloud-circle">
+      <button width="20px" height="20px" onclick="scrollToNext(this)"><b>&#709;</b></button>
+      <div class="cloud-circle-top">
         <svg width="0" height="0"> 
           <filter id="filter">
             <feTurbulence type="fractalNoise" baseFrequency="0.0121" numOctaves="4" />
             <feDisplacementMap in="SourceGraphic" scale="170" />
+          </filter>
+        </svg>
+      </div>
+    </div>
+
+    <div class="spacer">
+      <div class="cloud-circle">
+        <svg width="0" height="0"> 
+          <filter id="filter">
+            <feTurbulence type="fractalNoise" baseFrequency="0.0121" numOctaves="4" />
+            <feDisplacementMap in="SourceGraphic" scale="170" />
+          </filter>
+        </svg>
+      </div>
+      <div class="cloud-circle-near">
+        <svg width="0" height="0"> 
+          <filter id="filter">
+            <feTurbulence type="fractalNoise" baseFrequency="0.0121" numOctaves="4" />
+            <feDisplacementMap in="SourceGraphic" scale="100" />
+          </filter>
+        </svg>
+      </div>
+      <div class="cloud-circle-near-2">
+        <svg width="0" height="0"> 
+          <filter id="filter">
+            <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="4" />
+            <feDisplacementMap in="SourceGraphic" scale="120" />
           </filter>
         </svg>
       </div>
