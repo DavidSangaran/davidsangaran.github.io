@@ -6,11 +6,6 @@ var starArr = cloneSVG(star,star8, starCount);
 
 spreadSVG(starArr);
 drawLine(lineArr);
-//var line = document.getElementsByClassName("name-constellation-svg")[0];
-
-/* window.addEventListener('scroll', function() {
-    scrollToY(1000, 1000); // Example: Scroll to y=500 pixels over 1000 milliseconds
-  }); */
 
 const observer = new IntersectionObserver((entries) => {
 
@@ -115,8 +110,9 @@ function drawLine(arr){
 
 function scrollToNext(element) {
 
-    let nextDiv = element.parentElement.nextSibling.nextSibling;
-    nextDiv.scrollTo({ behavior: "smooth"});
+    let nextDiv = element.parentElement.nextSibling.nextSibling.nextSibling.nextSibling;
+    console.log(nextDiv);
+    nextDiv.scrollIntoView({ behavior: "smooth"});
    
 }
 

@@ -1,4 +1,4 @@
-/* html styling */
+/* --------------------------------------------------HTML STYLING-------------------------------------------------- */
 *{
     box-sizing: border-box;
 }
@@ -11,6 +11,7 @@ body{
     color: white;
     margin: 0;
     overflow-x: hidden;
+    /* overflow-y: hidden; */
     -ms-overflow-style: none; /* IE 11 */
     scrollbar-width: none; /* Firefox 64 */
     
@@ -25,7 +26,7 @@ body{
 } */
 
 
-/* elements styling */
+/* --------------------------------------------------ELEMENTS STYLING-------------------------------------------------- */
 
 .material-symbols-outlined {
     font-variation-settings:
@@ -37,7 +38,7 @@ body{
     padding: 2rem 1rem;
 }
 
-/* Body styling */
+/* --------------------------------------------------BODY STYLING-------------------------------------------------- */
 
 .practice-div{
     
@@ -82,7 +83,12 @@ body{
     text-align: center;
 }
 
-/* positioning */
+.spacer{
+    width: 100vw;
+    height: 100vh;
+}
+
+/* --------------------------------------------------POSITIONING (MAJOR)-------------------------------------------------- */
 
 .center{
     position: relative;
@@ -100,6 +106,8 @@ body{
 
     display: none;
 }
+
+/* --------------------------------------------------POSITIONING (MINOR)-------------------------------------------------- */
 
 .glow{
 
@@ -161,6 +169,8 @@ body{
     height: fit-content;
 
 }
+
+/* --------------------------------------------------INDIVIDUAL ELEMENTS-------------------------------------------------- */
 
 #person-padding{
 
@@ -232,6 +242,17 @@ body{
 
 }
 
+#cloud-circle {
+    width: 300px;
+    height: 180px;
+    border-radius: 50%;
+    filter: url(#filter);
+    box-shadow: 300px 180px 50px 0px #fff;
+    position: relative;
+    top: -320px;
+    left: -320px;
+}
+
 .person-in{
 
     transform: translate(100%,0%) rotate(20deg);
@@ -256,7 +277,7 @@ body{
 
 }
 
-/* animation */
+/* -------------------------------------------------- ANIMATION -------------------------------------------------- */
 @keyframes twinkle {
     from {
         opacity: 100%
