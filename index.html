@@ -98,26 +98,42 @@
       </div>
       <!-- <button width="20px" height="20px" onclick="scrollTox(document.documentElement,this.parentElement.nextSibling.nextSibling.offsetTop,600)">Click Me!</button>  -->
       <button width="20px" height="20px" onclick="scrollToNext(this)"><b>&#709;</b></button>
-      <div class="cloud-circle-top">
+      <!-- <div class="cloud-circle-top">
         <svg width="0" height="0"> 
           <filter id="filter">
             <feTurbulence type="fractalNoise" baseFrequency="0.0121" numOctaves="4" />
             <feDisplacementMap in="SourceGraphic" scale="170" />
           </filter>
         </svg>
-      </div>
+      </div> -->
     </div>
 
     <div class="spacer">
       <div class="cloud-circle">
         <svg width="0" height="0"> 
           <filter id="filter">
-            <feTurbulence type="fractalNoise" baseFrequency="0.0121" numOctaves="4" />
-            <feDisplacementMap in="SourceGraphic" scale="170" />
+            <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="4" />
+            <feDisplacementMap in="SourceGraphic" scale="150" />
+            <!-- <feGaussianBlur in="SourceGraphic" stdDeviation="0.01" /> -->
           </filter>
         </svg>
+        <svg width="500" height="500" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="gradient">  
+                <stop offset="30%"
+                stop-color="white"
+                 stop-opacity="1"/>  
+
+                <stop offset="100%"
+                stop-color="white"
+                 stop-opacity="0"/> 
+            </radialGradient>  
+         </defs>
+          <circle r="45" cx="50" cy="50" fill="url(#gradient)" />
+        </svg>
+         
       </div>
-      <div class="cloud-circle-near">
+      <!-- <div class="cloud-circle-near">
         <svg width="0" height="0"> 
           <filter id="filter">
             <feTurbulence type="fractalNoise" baseFrequency="0.0121" numOctaves="4" />
@@ -132,7 +148,7 @@
             <feDisplacementMap in="SourceGraphic" scale="120" />
           </filter>
         </svg>
-      </div>
+      </div> -->
     </div>
 
     <div class="title-header scrollElement" id="second-div">

@@ -80,7 +80,7 @@ function spreadSVG(svgArr){
         let randcolor = Math.floor(Math.random()*colorArr.length);
         let randBlur = Math.random() * 1;
         /* let randTime = 1; */
-        let randTime = Math.random() * (3 - 1) + 1;
+        let randTime = Math.random() * 1.5 + 1;
         
         svgArr[i].style.left = `${randX}%`
         svgArr[i].style.top = `${randY()}%`
