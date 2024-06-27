@@ -286,6 +286,16 @@ body{
     z-index: -1; */
 }
 
+.cloud-rectangle {
+    /* width: 50vw;
+    height: 50vh; */
+    filter: url(#filter1);
+    /* position: relative;
+    top: 0vh;
+    left: 0vw;
+    z-index: -1; */
+}
+
 .person-in{
 
     transform: translate(100%,0%) rotate(20deg);

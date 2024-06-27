@@ -23,6 +23,7 @@
     <svg id="svg-8star" class="name-svg" viewbox="0 0 408 408" style="visibility: hidden;">
       <use href="8star.svg#8star"/>
     </svg>
+
     <div class="practice-div" id="star-div">
       <div class="greeting-box">
         <span>Hey there! I'm,</span>
@@ -109,15 +110,15 @@
     </div>
 
     <div class="spacer">
-      <div class="cloud-circle">
+      <!-- <div class="cloud-circle">
         <svg width="0" height="0"> 
           <filter id="filter">
             <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="4" />
-            <feDisplacementMap in="SourceGraphic" scale="150" />
+            <feDisplacementMap in="SourceGraphic" scale="100" /> -->
             <!-- <feGaussianBlur in="SourceGraphic" stdDeviation="0.01" /> -->
-          </filter>
+          <!-- </filter>
         </svg>
-        <svg width="500" height="500" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <radialGradient id="gradient">  
                 <stop offset="30%"
@@ -129,9 +130,31 @@
                  stop-opacity="0"/> 
             </radialGradient>  
          </defs>
-          <circle r="45" cx="50" cy="50" fill="url(#gradient)" />
+          <circle r="225" cx="250" cy="250" fill="url(#gradient)" />
         </svg>
-         
+      </div> -->
+      <div class="cloud-rectangle">
+        <svg width="0" height="0"> 
+          <filter id="filter1">
+            <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="4" />
+            <feDisplacementMap in="SourceGraphic" scale="100" />
+            <!-- <feGaussianBlur in="SourceGraphic" stdDeviation="0.01" /> -->
+          </filter>
+        </svg>
+        <svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="gradient">  
+                <stop offset="30%"
+                stop-color="white"
+                 stop-opacity="1"/>  
+
+                <stop offset="100%"
+                stop-color="white"
+                 stop-opacity="0"/> 
+            </radialGradient>  
+         </defs>
+          <rect width="300" height="200" x="10" y="10" fill="url(#gradient)" />
+        </svg>
       </div>
       <!-- <div class="cloud-circle-near">
         <svg width="0" height="0"> 
@@ -177,7 +200,6 @@
          A little about myself, I used to be a soldier, fixing up fighter jets in the military.
         </p>
       </div>
-      
     </div>
 
     <div class="">
